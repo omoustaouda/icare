@@ -11,7 +11,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = APP_CONFIG.mailer.from
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -99,6 +99,9 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   config.pepper = Rails.application.secrets.devise_pepper
+
+  # Send a notification email when the user's password is changed
++ # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
