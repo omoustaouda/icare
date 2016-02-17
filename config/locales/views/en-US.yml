@@ -163,6 +163,7 @@ en-US:
     home:
       tagline: "Street to share, money to save."
       os_carpooling_platform: "The Open Source Carpooling Platform"
+      login_with_email_title: "Login/Register with your email address"
       learn_more: "Learn more"
       what_is_appname: "What is %{appname}?"
       main_features: "Main Features"

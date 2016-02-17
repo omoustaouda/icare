@@ -12,6 +12,9 @@
         '
         small demo
     h2= t('.os_carpooling_platform')
+    div
+        h2 class=["btn", "btn-success"]
+            =link_to t('.login_with_email_title'), "users/sign_in"
     == render 'facebook_login'
     .learn-more-container.hidden-xs
       = link_to '#', class: 'btn btn-lg btn-learn-more' do
