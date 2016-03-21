@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.35.0
+
+* Rails 4.2.6
+* Add scss_lint gem
+* Update gems
+
+## 0.34.5
+
+* Rails 4.2.5.2
+* Update gems
+
+## 0.34.4
+
+* Update gems
+
+## 0.34.3
+
+* Fix Rakefile
+* Update gems
+
+## 0.34.2
+
+* Fix secure headers
+* Font Awesome 4.5.0
+* Replace protocol-relative urls with https
+* Update html5shiv to 3.7.3
+
+## 0.34.1
+
+* Update gems
+
 ## 0.34.0
 
 * Add slim_lint gem

@@ -1,21 +1,28 @@
 # frozen_string_literal: true
-if defined?(SecureHeaders)
-  SecureHeaders::Configuration.default do |config|
-    config.hsts = { max_age: 20.years.to_i, include_subdomains: true }
-    config.x_frame_options = 'DENY'
-    config.x_content_type_options = 'nosniff'
-    config.x_xss_protection = '1; mode=block'
-    config.x_download_options = 'noopen'
-    config.x_permitted_cross_domain_policies = 'none'
-    config.csp = false
-    # config.csp = {
-    #  default_src: 'self https:',
-    #  font_src: 'self http://fonts.gstatic.com',
-    #  frame_src: 'https: https://*.facebook.com http://*.facebook.com',
-    #  img_src: 'data: http: https:',
-    #  report_uri: '/report_uri',
-    #  script_src: 'self eval inline http://*.facebook.net http://*.googleapis.com http://maps.gstatic.com https://*.facebook.net https://*.googleapis.com https://maps.gstatic.com',
-    #  style_src: 'self inline http://fonts.googleapis.com http://netdna.bootstrapcdn.com https://fonts.googleapis.com https://netdna.bootstrapcdn.com'
-    # }
-  end
+SecureHeaders::Configuration.default do |config|
+  config.hsts                              = "max-age=#{20.years.to_i}; includeSubdomains"
+  config.x_frame_options                   = 'DENY'
+  config.x_content_type_options            = 'nosniff'
+  config.x_xss_protection                  = '1; mode=block'
+  config.x_download_options                = 'noopen'
+  config.x_permitted_cross_domain_policies = 'none'
+  config.csp = SecureHeaders::OPT_OUT
+  # config.csp = {
+  #   default_src: %w(https: 'self'),
+  #   frame_src: %w(*.facebook.com),
+  #   connect_src: %w('self'),
+  #   font_src: %w('self' data: fonts.gstatic.com netdna.bootstrapcdn.com),
+  #   img_src: %w('self' data: *.fbcdn.net *.googleapis.com *.gstatic.com *.facebook.com),
+  #   media_src: %w('none'),
+  #   object_src: %w('none'),
+  #   script_src: %w('self' 'unsafe-eval' 'unsafe-inline' maps.googleapis.com connect.facebook.net),
+  #   style_src: %w('self' 'unsafe-inline' fonts.googleapis.com netdna.bootstrapcdn.com),
+  #   base_uri: %w('self'),
+  #   child_src: %w('self'),
+  #   form_action: %w('self'),
+  #   frame_ancestors: %w('none'),
+  #   plugin_types: %w(),
+  #   block_all_mixed_content: true,
+  #   report_uri: %w(/uri-directive)
+  # }
 end
