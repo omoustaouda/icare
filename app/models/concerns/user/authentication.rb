@@ -81,6 +81,7 @@ module Concerns
           user.provider = auth.provider
           user.uid = auth.uid
           user.set_fields_from_omniauth auth
+          user.password = "empty-password" #FIXME:TODO: added after this error:  The following errors were found: Password can't be blank
           user.save!
           user
         end
