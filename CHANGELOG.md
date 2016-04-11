@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.35.5
+
+* Improve application spec
+* Update gems
+
+## 0.35.4
+
+* Update gems
+
+## 0.35.3
+
+* Update gems
+
+## 0.35.2
+
+* Fix Readme
+* Update Contributing Guidelines
+* Update gems
+
+## 0.35.1
+
+* Update gems
+
 ## 0.35.0
 
 * Rails 4.2.6
