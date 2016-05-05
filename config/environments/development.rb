@@ -16,6 +16,7 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true;
   config.action_mailer.default_url_options = { host: APP_CONFIG.mailer.host }
+  config.action_mailer.smtp_settings = { smtp_settings: APP_CONFIG.mailer.smtp_settings }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
