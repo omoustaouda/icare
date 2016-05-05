@@ -22,6 +22,8 @@ SimpleConfig.for :application do
 
   set :google_analytics_id, nil
   set :google_maps_api_key, nil
+  
+  set :facebook_auth_enabled, false
 
   group :facebook do
     set :namespace, 'FACEBOOK_NAMESPACE'

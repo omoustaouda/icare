@@ -12,6 +12,8 @@
         '
         small demo
     h2= t('.os_carpooling_platform')
+    - if APP_CONFIG.facebook_auth_enabled
+      == render 'facebook_login'  
     div
         h2 class=["btn", "btn-success"]
             =link_to t('.login_with_email_title'), "users/sign_in"
