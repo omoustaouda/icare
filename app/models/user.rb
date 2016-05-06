@@ -72,6 +72,7 @@ class User
 
   # Info
   field :name
+  field :surname
   field :facebook_verified, type: Boolean, default: false
 
   # Extra
