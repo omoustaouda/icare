@@ -14,9 +14,9 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  config.action_mailer.raise_delivery_errors = true;
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: APP_CONFIG.mailer.host }
-  config.action_mailer.smtp_settings = { smtp_settings: APP_CONFIG.mailer.smtp_settings }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

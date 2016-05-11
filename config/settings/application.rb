@@ -11,7 +11,7 @@ SimpleConfig.for :application do
 
   set :advertising, true
   set :demo_mode, true
-  set :base_url, 'localhost:3000'
+  set :base_url, 'carpooling.fe.it'
   set :single_process_mode, true
 
   set :currency, '.00 €'
@@ -64,15 +64,16 @@ SimpleConfig.for :application do
   end
 
   group :mailer do
-    set :from, '"Icare" <no-reply@i.care>'
-    set :host, 'localhost'
+    set :from, '"CarpoolingFe" <no-reply@carpooling.fe.it>'
+    set :host, 'carpooling.fe.it'
 
     group :smtp_settings do
-      set :address, 'localhost'
+      set :address, 'smtp.gmail.com'
       set :port, 587
-      set :authentication, :plain
+      set :enable_starttls_auto, true
       set :domain, 'localhost'
 
+      # By default Icare is going to use the local mail server installed on the server (i.e. sendmail)
       set :user_name, 'test'
       set :password, 'test'
     end
