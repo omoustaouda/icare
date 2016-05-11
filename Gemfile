@@ -25,6 +25,7 @@ gem 'jc-validates_timeliness'
 
 # Authentication framework
 gem 'devise'
+gem 'devise-i18n'
 
 # Geospatial data library
 gem 'rgeo'
