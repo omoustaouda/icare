@@ -64,11 +64,11 @@ SimpleConfig.for :application do
   end
 
   group :mailer do
-    set :from, '"CarpoolingFe" <no-reply@carpooling.fe.it>'
-    set :host, 'carpooling.fe.it'
+    set :from, '"Icare" <no-reply@icare>'
+    set :host, 'localhost'
 
     group :smtp_settings do
-      set :address, 'smtp.gmail.com'
+      set :address, 'localhost'
       set :port, 587
       set :enable_starttls_auto, true
       set :domain, 'localhost'
