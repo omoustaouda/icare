@@ -1,5 +1,5 @@
 - require 'devise/version'
-p= t('.greeting', :name => @resource.name, :default => "Welcome %{name}!")
+p= t('.greeting', :recipient => @resource.name, :default => "Welcome %{recipient}!")
 p= t('.instruction', :default => "You can confirm your account email through the link below:")
 p= link_to t('.action', :default => "Confirm my account"),                                                                         \
     confirmation_url(@resource, :confirmation_token => (Devise::VERSION.start_with?('3.') ? @token : @resource.confirmation_token))
