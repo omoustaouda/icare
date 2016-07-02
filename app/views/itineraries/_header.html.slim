@@ -13,7 +13,9 @@
             = link_to @itinerary.user, user_path(@itinerary.user)
           - else
             = t('.app_user', appname: APP_CONFIG.app_name)
-        <p class="pre-line">#{@itinerary.description}</p>
+        - if user_signed_in?
+          <p class="pre-line">#{@itinerary.user.email}</p>
+          <p class="pre-line">#{@itinerary.description}</p>
     .tag-list
       span.tag.tag-icare= Itinerary.human_attribute_name :start_address
       span.tag= @itinerary.start_address
