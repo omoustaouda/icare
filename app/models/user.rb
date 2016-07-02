@@ -97,8 +97,8 @@ class User
 
   # Editable user info
   field :locale,                  type: String
-  field :send_email_messages,     type: Boolean, default: false
-  field :send_email_references,   type: Boolean, default: false
+  field :send_email_messages,     type: Boolean, default: true
+  field :send_email_references,   type: Boolean, default: true
   field :telephone,               type: String
   field :time_zone,               type: String,  default: 'UTC'
   field :vehicle_avg_consumption, type: Float,   default: APP_CONFIG.fuel_consumption
