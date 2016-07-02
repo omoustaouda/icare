@@ -11,9 +11,7 @@
       - if APP_CONFIG.demo_mode
         '
         small demo
-    h2= t('.os_carpooling_platform')
-    - if APP_CONFIG.facebook_auth_enabled
-      == render 'facebook_login'  
+    h2= t('.os_carpooling_platform') 
     div
         h2 class=["btn", "btn-success"]
             =link_to t('.login_with_email_title'), "users/sign_in"
@@ -61,5 +59,4 @@
     .col-sm-6
       .facepile-container-j
         .fb-facepile data-size='medium' data-max-rows='1'
-    .col-sm-6== render 'facebook_login'
-  == render 'shared/modal_why_facebook'
+    .col-sm-6
