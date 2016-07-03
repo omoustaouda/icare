@@ -224,6 +224,7 @@ en-US:
       title: Your itineraries
     show:
       member_since: "Member since %{date}"
+      verified_email_address: "Verified email address: %{email}"
       see_all: See All
       facebook_verified: "A Facebook user is considered verified if he takes any of the following actions: registers for mobile; confirms his account via SMS; enters a valid credit card."
       basic_info: Basic info
