@@ -2,6 +2,38 @@
 # Since this file is not part of the git repository, you can set here sensitive data for local development.
 
 SimpleConfig.for :application do
+
+  set :app_name, 'Icare'
+  set :repository_url, 'http://github.com/omoustaouda/icare'
+
+  set :secret_token, 'mysecrettoken'
+
+  set :advertising, true
+  set :demo_mode, true
+  set :base_url, 'localhost:3000'
+  set :single_process_mode, true
+
+  set :currency, '.00 €'
+  set :fuel_consumption, 0.12
+  set :fuel_currency, '€'
+
+  set :costs_calculation_service_link, 'http://servizi.aci.it/CKInternet/'
+
+  set :google_analytics_id, nil
+  set :google_maps_api_key, nil
+
+  # To enable domains filter uncomment next lines
+#  set :allowed_email_domains_regexp, %r{
+#    /\A([\w\.%\+\-]+)
+#    (domain1\.example\.com\z)|
+#    (domain2\.example\.com\z)
+#    /i
+#    end
+#  }x
+
+  # Default: no domains filter, Devise base email validation regexp is set
+  set :allowed_email_domains_regexp, '/\A[^@]+@[^@]+\z/'
+
   group :facebook do
     set :namespace, 'NAMESPACE'
     set :app_id, 'FACEBOOK_APP_ID'
